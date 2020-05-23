@@ -71,6 +71,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'signing_off.wsgi.application'
 
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'put your host user email here'
+EMAIL_HOST_PASSWORD = 'Put your app password here'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# If you're using SSL, enter 465.
+# If you're using TLS, enter 587.
+
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 

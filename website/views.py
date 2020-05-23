@@ -16,11 +16,12 @@ def donate(request):
             required_email_ext = college.college_ext
             email = form.cleaned_data.get('email')
             email_ext = email.split('@')[1]
-            print(required_email_ext, email_ext)
+            print(email, email_ext)
             if required_email_ext == email_ext:
-                subject = 'Subject'
-                message = "Here's a form :" + college.form_donate
-                to_email = list(college.college_email)
+                subject = "Subject"
+                message = "Here's a form : " + str(college.form_donate)
+                to_email = list(str(college.college_email).split(' '))
+                print(to_email)
                 try:
                     send_mail(subject, message, email, to_email)
                 except BadHeaderError:
